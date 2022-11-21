@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">St Peter Kwihota</string>
+    <string name="category1_name">Entrance</string>
+    <string name="category2_name">Misa</string>
+    <string name="category3_name">Offertory</string>
+    <string name="category4_name">Communion</string>
+    <string name="category5_name">Exit</string>
+
+    <string name="category1_description">Entrance songs</string>
+    <string name="category2_description">Mass songs</string>
+    <string name="category3_description">Offertory Songs.</string>
+    <string name="category4_description">Communion Songs</string>
+    <string name="category5_description">Exit Songs</string>
+
+</resources>

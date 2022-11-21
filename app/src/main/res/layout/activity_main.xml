@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00abc5"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="@string/app_name"
+        app:navigationIcon="@drawable/icon_menu" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20sp"
+        android:paddingBottom="100dp"
+        app:cardBackgroundColor="#00abc5"
+        app:cardCornerRadius="10sp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/readings_text_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:text="Daily Readings"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="23sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/readings_first_reading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/readings_text_title"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:fontFamily="@font/lato_regular"
+                android:text="1st Reading"
+                android:textColor="#ffffff"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/readings_excerpt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/readings_first_reading"
+                android:layout_marginLeft="12sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginRight="10sp"
+
+                android:fontFamily="@font/lato_light"
+                android:text="And the Word was made flesh and dwelt among us, (and we beheld his glory as the only begotten of the Father,)"
+                android:textColor="#ffffff"
+                android:textSize="18sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/readings_bible_verse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/readings_excerpt"
+                android:layout_marginLeft="15sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginRight="10sp"
+
+                android:fontFamily="@font/lato_regular"
+                android:text="John1:1"
+                android:textColor="#ffffff"
+                android:textSize="15sp">
+
+            </TextView>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25sp"
+        android:rowCount="2"
+        android:columnCount="2">
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card1"
+            android:layout_gravity="fill"
+            app:cardBackgroundColor="#00abc5"
+            app:cardCornerRadius="10sp"
+            android:layout_margin="20sp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:paddingTop="20sp"
+                android:paddingBottom="20sp">
+
+                <ImageView
+                    android:id="@+id/img_icon_events"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/mass" />
+
+                <TextView
+                    android:id="@+id/txt_events"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_icon_events"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Events"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp">
+
+                </TextView>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card2"
+            android:layout_gravity="fill"
+            app:cardBackgroundColor="#00abc5"
+            app:cardCornerRadius="10sp"
+            android:layout_margin="20sp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:paddingTop="20sp"
+                android:paddingBottom="20sp">
+
+                <ImageView
+                    android:id="@+id/img_hymns"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/music" />
+
+                <TextView
+                    android:id="@+id/text_hymns"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_hymns"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Hymns"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp">
+
+                </TextView>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card3"
+            android:layout_gravity="fill"
+            app:cardBackgroundColor="#00abc5"
+            app:cardCornerRadius="10sp"
+            android:layout_margin="20sp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:paddingTop="20sp"
+                android:paddingBottom="20sp">
+
+                <ImageView
+                    android:id="@+id/img_prayers"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/prayericon" />
+
+                <TextView
+                    android:id="@+id/txt_prayers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_prayers"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Prayers"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp">
+
+                </TextView>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card4"
+            android:layout_gravity="fill"
+            app:cardBackgroundColor="#00abc5"
+            app:cardCornerRadius="10sp"
+            android:layout_margin="20sp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:paddingTop="20dp">
+
+                <ImageView
+                    android:id="@+id/img_matangazo"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/announcementicon" />
+
+                <TextView
+                    android:id="@+id/text_matangazo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_matangazo"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Matangazo"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp">
+
+                </TextView>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+    </GridLayout>
+
+    <Button
+        android:id="@+id/buttonContribute"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="10sp"
+        android:background="@drawable/contribute_image_bg"
+        android:fontFamily="@font/lato_light"
+        android:textColor="#ffffff" />
+
+
+</LinearLayout>
